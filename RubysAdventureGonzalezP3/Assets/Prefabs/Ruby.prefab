@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6813284248801721013}
   - component: {fileID: 6813284248801721018}
-  - component: {fileID: 6813284248801721012}
   - component: {fileID: 2287920455850610207}
   - component: {fileID: 616388306963837535}
   - component: {fileID: 8004914296136876470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ruby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &6813284248801721012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6813284248801721019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 088ab77f3974232499f2e7a7d72dc9c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  maxHealth: 5
-  timeInvincible: 2
 --- !u!50 &2287920455850610207
 Rigidbody2D:
   serializedVersion: 4
@@ -121,7 +105,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &616388306963837535
