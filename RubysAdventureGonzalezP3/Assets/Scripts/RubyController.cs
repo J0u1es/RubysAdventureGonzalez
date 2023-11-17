@@ -6,9 +6,11 @@ using UnityEngine.UIElements;
 
 public class RubyController : MonoBehaviour
 {
-    public float speed = 3.0f;
+public float speed = 3.0f;
 
 public int maxHealth = 5;
+
+    public GameObject projectilePrefab;
 public float timeInvincible = 2.0f;
 
 public int health { get { return currentHealth; } }
@@ -60,7 +62,20 @@ void Update()
                 isInvincible = false;
             }
     }
+    if(Input.GetKeyDown(KeyCode.C)) 
+        {
+            Launch();
+        }
 }
+void Launch()
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(lookDirection, 300);
+
+        animator.SetTrigger("Launch");
+    }
 
 void FixedUpdate()
 {
@@ -86,4 +101,5 @@ public void ChangeHealth(int amount)
     currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
     Debug.Log(currentHealth + "/" + maxHealth);
     }
+
 }

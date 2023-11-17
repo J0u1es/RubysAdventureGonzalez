@@ -12,27 +12,27 @@ public class Projectile : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    public void Launch(Vector2 direction, float force)
-    {
-        rigidbody2d.AddForce(direction * force);
-    }
-
     void Update()
     {
-        if (transform.position.magnitude > 1000.0f)
+        if(transform.position.magnitude > 1000.0f) 
         {
             Destroy(gameObject);
         }
     }
 
+    public void Launch(Vector2 direction, float force)
+    {
+        rigidbody2d.AddForce(direction * force);
+    } 
+    
+
     void OnCollisionEnter2D(Collision2D other)
     {
         EnemyController e = other.collider.GetComponent<EnemyController>();
-        if (e != null)
+        if (e != null) 
         {
             e.Fix();
         }
-
         Destroy(gameObject);
     }
 }
