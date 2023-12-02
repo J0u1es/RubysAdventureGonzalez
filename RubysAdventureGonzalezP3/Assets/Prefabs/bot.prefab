@@ -110,7 +110,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8299660117393772244
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b2d920145ea614aa4037a24d159191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  vertical: 0
+  speed: 2
+  vertical: 1
   changeTime: 3
   smokeEffect: {fileID: 9196319333498689361, guid: 3b0c50aa0a332ad43a50cfac0be04ea2, type: 3}
 --- !u!82 &4818272122509687537
